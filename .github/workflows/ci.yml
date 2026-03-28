@@ -48,4 +48,4 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: "Finalización Exitosa"
-        run: echo "🚀 Imagen subida a Docker Hub: ${{ secrets.DOCKERHUB_USERNAME }}/suscripciones-api:latest"
+        run: echo "🚀 Imagen subida a Docker Hub ${{ secrets.DOCKERHUB_USERNAME }}/suscripciones-api:latest"
