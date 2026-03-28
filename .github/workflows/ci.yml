@@ -27,7 +27,11 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-
+      #instala un constructor avanzado (BuildKit). Este es el que permite que el proceso sea rápido y use "caché inteligente" en la nube.
+      - name: "Set up Docker Buildx"
+        uses: docker/setup-buildx-action@v3
+        with:
+          driver: docker-container
       - name: "Extract Metadata"
         id: meta
         uses: docker/metadata-action@v5
