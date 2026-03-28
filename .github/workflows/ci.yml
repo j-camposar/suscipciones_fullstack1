@@ -3,7 +3,7 @@ name: "CD: Build and Push to Docker Hub"
 on:
   push:
     # El despliegue solo ocurre cuando se hace push a main (o una rama estable)
-    branches: [ "main" ]
+    branches: [ "main", "fix/workflows" ]
   workflow_dispatch: # Permite ejecutarlo manualmente desde la pestaña Actions
 
 jobs:
@@ -27,7 +27,11 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-
+      #instala un constructor avanzado (BuildKit). Este es el que permite que el proceso sea rápido y use "caché inteligente" en la nube.
+      - name: "Set up Docker Buildx"
+        uses: docker/setup-buildx-action@v3
+        with:
+          driver: docker-container
       - name: "Extract Metadata"
         id: meta
         uses: docker/metadata-action@v5
