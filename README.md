@@ -32,7 +32,7 @@ El código está organizado siguiendo el estándar de 3 Capas:
 
 ```
 
-git clone [enlace sospechoso eliminado]
+git clone https://github.com/j-camposar/suscipciones_fullstack1
 
 ```
 
