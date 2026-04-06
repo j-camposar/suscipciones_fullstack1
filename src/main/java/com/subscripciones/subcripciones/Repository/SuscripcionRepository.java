@@ -15,6 +15,13 @@ public class SuscripcionRepository {
     // Simulación de la tabla 'suscripciones'
     private List<Suscrpcion> listaSuscrpcions = new ArrayList<>();
 
+    public SuscripcionRepository(){
+        listaSuscrpcions.add(new Suscrpcion(1,"Basic", 1000,2, true, "personal"));
+        listaSuscrpcions.add(new Suscrpcion(2,"PersonalPro", 2000,3, true, "personal"));
+        listaSuscrpcions.add(new Suscrpcion(3,"Family", 2000,5, true, "family"));
+        listaSuscrpcions.add(new Suscrpcion(4,"FamilyPro", 3000,10, true, "family"));
+        listaSuscrpcions.add(new Suscrpcion(5,"Pro", 4000,20, true, "pro"));
+    }
     /**
      * SELECT * FROM suscripciones
      */
