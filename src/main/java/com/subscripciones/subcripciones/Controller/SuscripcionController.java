@@ -12,6 +12,7 @@ import com.subscripciones.subcripciones.Service.SuscripcionService;
  */
 @RestController
 @RequestMapping("/api/v1") // Prefijo global para todos los endpoints de este controlador
+@CrossOrigin(origins = "*") // Permite peticiones desde tu HTML
 public class SuscripcionController {
 
     @Autowired 
