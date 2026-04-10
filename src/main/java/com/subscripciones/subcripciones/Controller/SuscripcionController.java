@@ -26,7 +26,14 @@ public class SuscripcionController {
     public List<Suscrpcion> buscarTodos() {
         return suscripcionService.buscarTodos();
     }
-    
+      /**
+     * Obtener todas las suscripciones.
+     * GET http://localhost:8080/api/v1/holaMundo
+     */
+    @GetMapping("/holaMundo")
+    public String holaMundo() {
+        return "hola mundo";
+    }
     /**
      * Crear una nueva suscripción.
      * Recibe un JSON en el cuerpo de la petición.

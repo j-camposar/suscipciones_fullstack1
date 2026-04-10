@@ -3,7 +3,7 @@ name: "CD: Build and Push to Docker Hub"
 on:
   push:
     # El despliegue solo ocurre cuando se hace push a main (o una rama estable)
-    branches: [ "main" ]
+    # branches: [ "main" ]
   workflow_dispatch: # Permite ejecutarlo manualmente desde la pestaña Actions
 
 jobs:
